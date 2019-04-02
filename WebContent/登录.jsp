@@ -31,7 +31,7 @@
 		   {
 			   alert("用户名不能为空");
 			 return false;
-			
+			  
 			   }
 		   if(document.getElementById("password").value=="")
 			   {

@@ -13,7 +13,6 @@
         width:1140px;
         background: green;
        
-        
         }
        .q .q1{
          font-size: 18px;

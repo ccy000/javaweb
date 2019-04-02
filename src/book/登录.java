@@ -32,7 +32,7 @@ public class 登录 extends HttpServlet {
 		request.getRequestDispatcher("index1.jsp").forward(request,response);
 		}
 		else {
-			response.getWriter().println("密码或用户名错误！");
+			response.getWriter().println("密码或用户名错误 ！");
 			
 		}
 	}

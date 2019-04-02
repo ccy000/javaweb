@@ -2,6 +2,7 @@
     <%@page import="java.sql.*" %>
     <%request.setCharacterEncoding("UTF-8");response.setCharacterEncoding("UTF-8"); %>
 <html>
+
 <title>图书属性页面</title>
 <head>
 <style type="text/css">

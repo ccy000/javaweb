@@ -32,7 +32,7 @@ public class SelectAll extends HttpServlet {
 		// TODO Auto-generated method stub
 		request.setCharacterEncoding("utf-8");
 	    response.setContentType("text/html;charset:utf-8");
-	   
+	    
 	    try {
 	    	Class.forName("com.mysql.jdbc.Driver");
 	    	Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/book", "root", "root");

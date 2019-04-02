@@ -44,6 +44,7 @@ public class Findservlet extends HttpServlet {
 	    	ResultSet rs=ps.executeQuery();
 	    	//在此preparedstatement对象中(ps)执行sql语句
 	    	//并返回该查询生成的resultset对象
+	    	
 	    	//Resultset接口用于保存JDBC执行查询时返回的结果集
 	    	List<Book> list=new ArrayList<Book>(); 
 	    	int i=1;

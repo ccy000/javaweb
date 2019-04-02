@@ -73,7 +73,7 @@ public class Book {
 	 */
 	public String getQq() {
 		return qq;
-	}
+	} 
 	/**
 	 * @param qq ÒªÉèÖÃµÄ qq
 	 */

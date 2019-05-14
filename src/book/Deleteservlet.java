@@ -32,8 +32,8 @@ public class Deleteservlet extends HttpServlet {
 		
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/book", "root", "root");
-			String sql="delete from books where name=?";
+			Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/books", "root", "root");
+			String sql="delete from book where name=?";
 			
 			PreparedStatement ps=conn.prepareStatement(sql);
 			

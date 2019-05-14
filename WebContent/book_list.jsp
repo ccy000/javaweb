@@ -41,8 +41,8 @@
       <th style="width:70px;"> 价格 </th>
       <th style="width:70px;">数量</th>
       <th style="width:110px;">作者</th>
-      <th style="width:120px;">qq</th>
-      <th style="width:130px;">联系电话</th>
+      <th style="width:120px;">联系电话</th>
+      <th style="width:130px;">出版地址</th>
       <th style="width:140px;">备注1</th>
       <th style="width:140px;">备注2</th>
       <th style="width:200px;">备注3</th>
@@ -64,8 +64,8 @@
         		<td align="center"><%=book.getPrice() %></td>
         		<td align="center"><%=book.getBookcount() %></td>
         		<td align="center"><%=book.getAuthor() %></td>
-        		<td align="center"><%=book.getQq() %></td>
         		<td align="center"><%=book.getTel() %></td>
+        		<td align="center"><%=book.getWhere() %></td>
         		<td>
         		 <form action="Updateservlet" method="post">
         		     <input type="hidden" name="name" value="<%=book.getName()%>">

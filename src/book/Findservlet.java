@@ -35,9 +35,9 @@ public class Findservlet extends HttpServlet {
 	   
 	    try {
 	    	Class.forName("com.mysql.jdbc.Driver");
-	    	Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/book", "root", "root");
+	    	Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/books", "root", "root");
 	    	
-	    	String sql="SELECT * FROM books where name=?";
+	    	String sql="SELECT * FROM book where name=?";
 	    	
 	    	PreparedStatement ps=conn.prepareStatement(sql);
 	    	ps.setString(1, name);
@@ -56,8 +56,8 @@ public class Findservlet extends HttpServlet {
 	    		book.setPrice(rs.getInt("price"));
 	    		book.setBookcount(rs.getInt("bookcount"));
 	    		book.setAuthor(rs.getString("author"));
-	    		book.setQq(rs.getString("qq"));
 	    		book.setTel(rs.getString("tel"));
+	    		book.setWhere(rs.getString("where"));
 	    		
 	    		list.add(book);
 	    	}

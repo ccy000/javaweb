@@ -35,9 +35,9 @@ public class SelectAll extends HttpServlet {
 	    
 	    try {
 	    	Class.forName("com.mysql.jdbc.Driver");
-	    	Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/book", "root", "root");
+	    	Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/books", "root", "root");
 	    	
-	    	String sql="SELECT * FROM books";
+	    	String sql="SELECT * FROM book";
 	    	
 	    	Statement st=conn.createStatement();
 	    	ResultSet rs=st.executeQuery(sql);
@@ -52,8 +52,8 @@ public class SelectAll extends HttpServlet {
 	    		book.setPrice(rs.getInt("price"));
 	    		book.setBookcount(rs.getInt("bookcount"));
 	    		book.setAuthor(rs.getString("author"));
-	    		book.setQq(rs.getString("qq"));
 	    		book.setTel(rs.getString("tel"));
+	    		book.setWhere(rs.getString("where"));
 	    		
 	    		list.add(book);
 	    	}

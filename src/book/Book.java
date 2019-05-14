@@ -6,8 +6,8 @@ public class Book {
 	private int price;
 	private int bookcount;
 	private String author;
-	private String qq;
 	private String tel;
+	private String where;
 	/**
 	 * @return id
 	 */
@@ -71,26 +71,26 @@ public class Book {
 	/**
 	 * @return qq
 	 */
-	public String getQq() {
-		return qq;
+	public String getTel() {
+		return tel;
 	} 
 	/**
 	 * @param qq 要设置的 qq
 	 */
-	public void setQq(String qq) {
-		this.qq = qq;
+	public void setTel(String tel) {
+		this.tel = tel;
 	}
 	/**
 	 * @return tel
 	 */
-	public String getTel() {
-		return tel;
+	public String getWhere() {
+		return where;
 	}
 	/**
 	 * @param tel 要设置的 tel
 	 */
-	public void setTel(String tel) {
-		this.tel = tel;
+	public void setWhere(String where) {
+		this.where = where;
 	}
 	
 

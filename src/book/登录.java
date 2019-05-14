@@ -21,20 +21,18 @@ public class 登录 extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		request.setCharacterEncoding("UTF-8");
-		response.setCharacterEncoding("UTF-8");
+		request.setCharacterEncoding("utf-8");
+	    response.setContentType("text/html;charset:utf-8");
 		
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		
 		if("孙孟强".equals(username) && "123".equals(password)) {
 			
-		request.getRequestDispatcher("index1.jsp").forward(request,response);
+		request.getRequestDispatcher("searchbook.html").forward(request,response);
 		}
-		else {
-			response.getWriter().println("密码或用户名错误 ！");
-			
-		}
+		else
+			request.getRequestDispatcher("login.html").forward(request,response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

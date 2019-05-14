@@ -35,8 +35,8 @@ public class Updateservlet1 extends HttpServlet {
 		
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/book", "root", "root");
-			String sql="update books set bookcount=? where name=?";
+			Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/books", "root", "root");
+			String sql="update book set bookcount=? where name=?";
 			
 			PreparedStatement ps=conn.prepareStatement(sql);
 			

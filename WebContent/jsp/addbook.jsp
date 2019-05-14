@@ -35,9 +35,9 @@
     <%
         try{
         	Class.forName("com.mysql.jdbc.Driver");
-			Connection conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/book"	, "root","root");
+			Connection conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/books"	, "root","root");
 			
-			String sql="insert into books(name,price,bookcount,author,qq,tel) values(?,?,?,?,?,?)";
+			String sql="insert into book(name,price,bookcount,author,tel,where) values(?,?,?,?,?,?)";
 			
 			PreparedStatement ps=conn.prepareStatement(sql);
 		    
@@ -46,8 +46,8 @@
 			ps.setInt(2, book.getPrice());
 			ps.setInt(3, book.getBookcount());
 			ps.setString(4,book.getAuthor());
-			ps.setString(5,book.getQq());
-			ps.setString(6,book.getTel());
+			ps.setString(5,book.getTel());
+			ps.setString(6,book.getWhere());
 			
 			int row=ps.executeUpdate();//更新操作
 			if(row>0)

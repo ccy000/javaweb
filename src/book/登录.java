@@ -27,7 +27,7 @@ public class µÇÂ¼ extends HttpServlet {
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		
-		if("ËïÃÏÇ¿".equals(username) && "123".equals(password)) {
+		if("admin".equals(username) && "123".equals(password)) {
 			
 		request.getRequestDispatcher("searchbook.html").forward(request,response);
 		}

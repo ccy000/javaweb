@@ -7,17 +7,42 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>	
     <link rel="stylesheet" href="css/add.css">
+    <style>
+         /* #select{
+         margin-bottom: 50px;
+        width: 100%;
+        height: 55px;
+        border: 1px solid black;
+    } */
+     #select-nav{
+        border-radius: 8px;
+        border: 1px solid black;
+        width: 100px;
+        float: right;
+        font-size: 18px;
+    }
+    </style>
 </head>
 <body>
     <div id="target">
+        <div class="select">
+                <select name="" id="select-nav" onchange="window.location=this.value;">
+                        <option value="#">主页</option>
+                        <option value="#">增加</option>
+                        <option value="#">删除</option>
+                        <option value="#">查询</option>
+                        <option value="#">个人信息</option>
+                    </select>
+        </div>
         <div class="target-1">
             <ul>
                 <li><a href="www.baidu.com">目录</a></li>
-                <li><a href="#">目录</a></li>
-                <li><a href="#">目录</a></li>
-                <li><a href="#">目录</a></li>
+                <li><a href="www.baidu.com">目录</a></li>
+                <li><a href="www.baidu.com">目录</a></li>
+                <li><a href="www.baidu.com">目录</a></li>
                 <li><a href="#">目录</a></li>
             </ul>
+           
         </div>
     <div class="form" style="position:relative">
         <div class="form_register" style="position:absolute">  

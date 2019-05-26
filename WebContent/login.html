@@ -5,7 +5,6 @@
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 <meta name="viewport" content="width=device-width, initial-scale=1"> 
-
 <script type="text/javascript">
        function as()
         { 
@@ -27,9 +26,6 @@
 <link rel="stylesheet" type="text/css" href="css/demo.css" />
 <!--必要样式-->
 <link rel="stylesheet" type="text/css" href="css/component.css" />
-<!--[if IE]>
-<script src="js/html5.js"></script>
-<![endif]-->
 </head>
 <body>
 		<div class="container demo-1">
@@ -65,9 +61,9 @@
 		<script src="js/rAF.js"></script>
 		<script src="js/demo-1.js"></script>
 		<script language="javascript">
-			var code; //在全局 定义验证码
+			var code; 
 			function createCode()
-			{ //创建验证码函数
+			{ 
 			 code = "";
 			 var codeLength =4;//验证码的长度
 			 var selectChar = new Array(0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f','g','h','i','j','k',
@@ -84,7 +80,7 @@
 			 document.getElementById("discode").innerHTML=code; // 显示
 			}
 			function but()
-			{//验证验证码输入是否正确
+			{
 			 var val1=document.getElementById("t1").value;
 			 var val2=code;
 			 if(val1!=val2){

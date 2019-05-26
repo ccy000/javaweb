@@ -1,5 +1,4 @@
 package book;
-
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -17,31 +16,21 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/Deleteservlet")
 public class Deleteservlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    
     public Deleteservlet() {
         super();
         // TODO Auto-generated constructor stub
     }
-
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset:utf-8");
-		
 		String name=(String)request.getParameter("name");
-		
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/books", "root", "root");
-			String sql="delete from book where name=?";
-			
+			String sql="delete from book where name=?";	
 			PreparedStatement ps=conn.prepareStatement(sql);
-			
-			
 			ps.setString(1, name);
-			
 			ps.executeUpdate();
-			
 			conn.close();
 			ps.close();
 		}
@@ -61,5 +50,4 @@ public class Deleteservlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
-
 }

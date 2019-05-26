@@ -55,16 +55,13 @@ public class Addbook extends HttpServlet {
 			int row=ps.executeUpdate();//更新操作
 			if(row>0)
 			{
-				System.out.print("成功添加了"+row+"条数据!");
-				
+				System.out.print("成功添加了"+row+"条数据!");	
 			}
 			else
 				System.out.println("添加失败！");
 			ps.close();
-			conn.close();
-			
+			conn.close();	
         }
-   
     catch(SQLException e)
     {
     	System.out.print("图书信息添加失败！");
@@ -75,13 +72,11 @@ public class Addbook extends HttpServlet {
 	}
 		 request.getRequestDispatcher("searchbook.html").forward(request, response);
 	}
-
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
 	}
 
 }

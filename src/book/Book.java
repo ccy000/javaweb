@@ -15,7 +15,7 @@ public class Book {
 		return id;
 	}
 	/**
-	 * @param id Ҫ���õ� id
+	 * @param id 
 	 */
 	public void setId(int id) {
 		this.id = id;
@@ -27,7 +27,7 @@ public class Book {
 		return name;
 	}
 	/**
-	 * @param name Ҫ���õ� name
+	 * @param name 
 	 */
 	public void setName(String name) {
 		this.name = name;
@@ -39,7 +39,7 @@ public class Book {
 		return price;
 	}
 	/**
-	 * @param price Ҫ���õ� price
+	 * @param price 
 	 */
 	public void setPrice(int price) {
 		this.price = price;
@@ -51,7 +51,7 @@ public class Book {
 		return bookcount;
 	}
 	/**
-	 * @param bookcount Ҫ���õ� bookcount
+	 * @param bookcount 
 	 */
 	public void setBookcount(int bookcount) {
 		this.bookcount = bookcount;
@@ -63,7 +63,7 @@ public class Book {
 		return author;
 	}
 	/**
-	 * @param author Ҫ���õ� author
+	 * @param author 
 	 */
 	public void setAuthor(String author) {
 		this.author = author;

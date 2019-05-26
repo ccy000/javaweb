@@ -16,7 +16,6 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/Findservlet")
 public class Findservlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
     public Findservlet() {
         super();
         // TODO Auto-generated constructor stub
@@ -26,17 +25,13 @@ public class Findservlet extends HttpServlet {
 		doPost(request, response);
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		
+		// TODO Auto-generated method stub	
 		request.setCharacterEncoding("utf-8");
 	    response.setContentType("text/html;charset:utf-8");
-	    
 	    String name=(String)request.getParameter("name");
-	   
 	    try {
 	    	Class.forName("com.mysql.jdbc.Driver");
 	    	Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/books", "root", "root");
-	    	
 	    	String sql="SELECT * FROM book where name=?";
 	    	
 	    	PreparedStatement ps=conn.prepareStatement(sql);
@@ -57,29 +52,21 @@ public class Findservlet extends HttpServlet {
 	    		book.setBookcount(rs.getInt("bookcount"));
 	    		book.setAuthor(rs.getString("author"));
 	    		book.setTel(rs.getString("tel"));
-	    		book.setWhere(rs.getString("where"));
-	    		
+	    		book.setWhere(rs.getString("where"));	    		
 	    		list.add(book);
-	    	}
-	    	
-	    	request.setAttribute("list", list);
-	    	
+	    	}	    	
+	    	request.setAttribute("list", list);    	
 	    	rs.close();
 	    	conn.close();
 	    	ps.close();
-	    }
-	    
-	    catch (SQLException e) {
-			
+	    }	    
+	    catch (SQLException e) {			
 			e.printStackTrace();
-		} catch (ClassNotFoundException e) {
-			
+		} catch (ClassNotFoundException e) {			
 			e.printStackTrace();
 		}
-	    request.getRequestDispatcher("book_list.jsp").forward(request, response);
-	
+	    request.getRequestDispatcher("book_list.jsp").forward(request, response);	
 	}
-
 }
 
 
